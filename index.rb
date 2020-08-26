@@ -83,8 +83,61 @@ puts "面積は#{area}です"
 # →面積は72です
 
 
+# 条件分岐(Rubyは条件式を()で囲ったり、{}を入れないが、最後に「end」を入れる)
+# 以上、以下は「=」が入り、その数も含める
+score = 92
+if score > 80
+  puts "よくできました"
+end
+# →よくできました (条件として正しい(true)なので出力される)
 
+score = 80
+if puts score > 80
+end
+# →false
 
+if puts score <= 80
+end
+# →true
 
+if score <= 80
+  puts "がんばりましょう"
+end
+# →がんばりましょう
 
+score = 100
+if score == 100
+  puts "満点です"
+end
+# →満点です
 
+# 「!=」異なる。Rubyの時はjsと比べてイコールが1つ少ない
+if score != 100 
+  puts "満点ではありません"
+end
+# →falseのため出力されない
+
+score = 60
+if score > 80
+  puts "よくできました"
+else 
+  puts "がんばりましょう"
+end
+# →がんばりましょう
+
+# ※jsの時は「else if」だったが、Rubyの場合は「elsif」
+score = 73
+if score > 80
+  puts "よくできました"
+elsif score > 60
+  puts "まずまずです"
+else
+  puts "がんばりましょう"
+end
+# →まずまずです
+
+score = 96
+if score >= 95 && score <= 99
+  puts "高得点です！次は満点を目指しましょう。"
+end
+# →高得点です！次は満点を目指しましょう。
