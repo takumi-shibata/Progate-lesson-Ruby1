@@ -89,3 +89,75 @@ width = 8
 area = length * width
 puts "面積は#{area}です"
 # →面積は72です
+
+
+
+# 7.条件分岐(Rubyは条件式を()で囲ったり、{}を入れないが、最後に「end」を入れる)
+# ※以上、以下は「=」が入り、その数も含める
+score = 92
+if score > 80
+  puts "よくできました"
+end
+# →よくできました (条件として正しい(true)なので出力される)
+
+score = 80
+puts score > 80
+# →false
+
+puts score <= 80
+# →true
+
+if score <= 80
+  puts "がんばりましょう"
+end
+# →がんばりましょう
+
+score = 100
+if score == 100
+  puts "満点です"
+end
+# →満点です
+
+if score != 100 # 「!=」異なる。Rubyの時はjsと比べてイコールが1つ少ない
+  puts "満点ではありません"
+end
+# →falseのため出力されない
+
+score = 60
+if score > 80
+  puts "よくできました"
+else 
+  puts "がんばりましょう"
+end
+# →がんばりましょう
+
+score = 73
+if score > 80
+  puts "よくできました"
+elsif score > 60　# ※jsの時は「else if」だったが、Rubyの場合は「elsif」
+  puts "まずまずです"
+else
+  puts "がんばりましょう"
+end
+# →まずまずです
+
+score = 96
+if score >= 95 && score <= 99
+  puts "高得点です！次は満点を目指しましょう。"
+end
+# →高得点です！次は満点を目指しましょう。
+
+
+
+# ↓総合演習↓
+number = 48
+if number % 3 == 0 && number % 5 == 0
+  puts "15の倍数です"
+elsif number % 5 == 0
+  puts "5の倍数です"
+elsif number % 3 == 0
+  puts "3の倍数です"
+else
+  puts "3の倍数でも5の倍数でもありません"
+end
+# →3の倍数です
